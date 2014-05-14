@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Pelicanのインストール - Toshiyuki Takeda</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Toshiyuki Takeda" />
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Pelicanのインストール"/>
+            <meta property="og:url" content="/install_pelican.html"/>
+            <meta property="og:description" content="GithubPage作成にをPelicanを使う Creating A Pelican-Powered Site on GitHub Pages Run workon your_username.github.com to activate the project&#39;s virtualenv. Run python new_post.py to create a new post. Edit the post in your favorite text editor. Examine the post in context of your website with make devserver. Shut the server ..."/>
+            <meta property="article:published_time" content="2014-05-14" />
+            <meta property="article:section" content="blog" />
+            <meta property="article:tag" content="pelican" />
+            <meta property="article:tag" content="github" />
+            <meta property="article:tag" content="blog" />
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+        <link href="/static/css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<!--
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Toshiyuki Takeda            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/activelearningworkshop.html">Activelearningworkshop</a>
+                        </li>
+                        <li >
+                            <a href="/category/al.html">Al</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="/category/la.html">La</a>
+                        </li>
+                        <li >
+                            <a href="/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="/category/oe.html">Oe</a>
+                        </li>
+                        <li >
+                            <a href="/category/ws.html">Ws</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse --><!--
+    </div>
+</div>--><!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9" id="main">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/install_pelican.html"
+                       rel="bookmark"
+                       title="Permalink to Pelicanのインストール">
+                        Pelicanのインストール
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-05-14T16:33:00"> 水 14 5月 2014</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">pelican</a>
+        /
+	<a href="/tag/github.html">github</a>
+        /
+	<a href="/tag/blog.html">blog</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h2>GithubPage作成にをPelicanを使う</h2>
+<p><a href="http://magically.us/2013-02-03/creating-a-pelican-powered-site-on-github-pages.html">Creating A Pelican-Powered Site on GitHub Pages</a></p>
+<ol>
+<li>Run workon your_username.github.com to activate the project's virtualenv.</li>
+<li>Run python new_post.py to create a new post.</li>
+<li>Edit the post in your favorite text editor.</li>
+<li>Examine the post in context of your website with make devserver. Shut the server down with ./develop_server.sh stop</li>
+<li>When satisfied with the post, run git commit -am "Message describing the post"</li>
+<li>Push the source changes with git push origin source</li>
+<li>Push compiled files to your website with make github</li>
+</ol>
+<p><a href="http://blog.sotm.jp/2014/01/04/Pelican-Markdown-GithubPages-install-guide/">Pelican + Markdown + GitHub Pagesで管理するブログの作り方</a>
+<a href="http://qiita.com/5t111111/items/c5d261941f4d8440288e">Pelican ブログのインストール方法</a></p>
+<h3>pelicanのインストール</h3>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+<span class="nl">Password:</span>
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span> <span class="n">pelican</span>
+  <span class="n">Downloading</span> <span class="n">pelican</span><span class="o">-</span><span class="mf">3.3</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="p">(</span><span class="mi">195</span><span class="n">kB</span><span class="p">)</span><span class="o">:</span> <span class="mi">195</span><span class="n">kB</span> <span class="n">downloaded</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">egg_info</span> <span class="k">for</span> <span class="n">package</span> <span class="n">pelican</span>
+
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span> <span class="n">feedgenerator</span><span class="o">&gt;=</span><span class="mf">1.6</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+  <span class="n">Downloading</span> <span class="n">feedgenerator</span><span class="o">-</span><span class="mf">1.7</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">egg_info</span> <span class="k">for</span> <span class="n">package</span> <span class="n">feedgenerator</span>
+
+<span class="nl">warning:</span> <span class="n">no</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="sc">&#39;*&#39;</span> <span class="n">under</span> <span class="n">directory</span> <span class="err">&#39;</span><span class="n">tests</span><span class="err">&#39;</span>
+<span class="nl">warning:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">matching</span> <span class="err">&#39;</span><span class="o">*</span><span class="p">.</span><span class="n">pyc</span><span class="err">&#39;</span> <span class="n">found</span> <span class="n">under</span> <span class="n">directory</span> <span class="err">&#39;</span><span class="n">tests</span><span class="err">&#39;</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">to</span> <span class="n">upgrade</span><span class="p">)</span><span class="o">:</span> <span class="n">jinja2</span><span class="o">&gt;=</span><span class="mf">2.7</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">to</span> <span class="n">upgrade</span><span class="p">)</span><span class="o">:</span> <span class="n">pygments</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">to</span> <span class="n">upgrade</span><span class="p">)</span><span class="o">:</span> <span class="n">docutils</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">to</span> <span class="n">upgrade</span><span class="p">)</span><span class="o">:</span> <span class="n">pytz</span><span class="o">&gt;=</span><span class="mi">0</span><span class="n">a</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span> <span class="n">blinker</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+  <span class="n">Downloading</span> <span class="n">blinker</span><span class="o">-</span><span class="mf">1.3</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="p">(</span><span class="mi">91</span><span class="n">kB</span><span class="p">)</span><span class="o">:</span> <span class="mi">91</span><span class="n">kB</span> <span class="n">downloaded</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">egg_info</span> <span class="k">for</span> <span class="n">package</span> <span class="n">blinker</span>
+
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span> <span class="n">unidecode</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+  <span class="n">Downloading</span> <span class="n">Unidecode</span><span class="o">-</span><span class="mf">0.04.14</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="p">(</span><span class="mi">200</span><span class="n">kB</span><span class="p">)</span><span class="o">:</span> <span class="mi">200</span><span class="n">kB</span> <span class="n">downloaded</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">egg_info</span> <span class="k">for</span> <span class="n">package</span> <span class="n">unidecode</span>
+
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">to</span> <span class="n">upgrade</span><span class="p">)</span><span class="o">:</span> <span class="n">six</span> <span class="n">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="n">from</span> <span class="n">pelican</span><span class="p">)</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="o">:</span> <span class="n">pelican</span><span class="p">,</span> <span class="n">feedgenerator</span><span class="p">,</span> <span class="n">blinker</span><span class="p">,</span> <span class="n">unidecode</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">pelican</span>
+
+<span class="n">Installing</span> <span class="n">pelican</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">bin</span>
+<span class="n">Installing</span> <span class="n">pelican</span><span class="o">-</span><span class="n">import</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">bin</span>
+<span class="n">Installing</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">bin</span>
+<span class="n">Installing</span> <span class="n">pelican</span><span class="o">-</span><span class="n">themes</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">bin</span>
+<span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">feedgenerator</span>
+
+<span class="nl">warning:</span> <span class="n">no</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="sc">&#39;*&#39;</span> <span class="n">under</span> <span class="n">directory</span> <span class="err">&#39;</span><span class="n">tests</span><span class="err">&#39;</span>
+<span class="nl">warning:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">matching</span> <span class="err">&#39;</span><span class="o">*</span><span class="p">.</span><span class="n">pyc</span><span class="err">&#39;</span> <span class="n">found</span> <span class="n">under</span> <span class="n">directory</span> <span class="err">&#39;</span><span class="n">tests</span><span class="err">&#39;</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">blinker</span>
+
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">unidecode</span>
+
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">pelican</span> <span class="n">feedgenerator</span> <span class="n">blinker</span> <span class="n">unidecode</span>
+<span class="n">Cleaning</span> <span class="n">up</span><span class="p">...</span>
+
+<span class="n">GitHub</span> <span class="n">Pages</span><span class="err">への公開のための</span><span class="n">ghp</span><span class="o">-</span><span class="n">import</span><span class="err">をインストールする。</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
+  <span class="n">Downloading</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span><span class="o">-</span><span class="mf">0.4.0</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">egg_info</span> <span class="k">for</span> <span class="n">package</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
+
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="o">:</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
+<span class="n">changing</span> <span class="n">mode</span> <span class="n">of</span> <span class="n">build</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="mf">2.7</span><span class="o">/</span><span class="n">ghp</span><span class="o">-</span><span class="n">import</span> <span class="n">from</span> <span class="mi">644</span> <span class="n">to</span> <span class="mi">755</span>
+
+<span class="n">changing</span> <span class="n">mode</span> <span class="n">of</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">takeda</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Enthought</span><span class="o">/</span><span class="n">Canopy_64bit</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">ghp</span><span class="o">-</span><span class="n">import</span> <span class="n">to</span> <span class="mi">755</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">ghp</span><span class="o">-</span><span class="n">import</span>
+<span class="n">Cleaning</span> <span class="n">up</span><span class="p">...</span>
+
+<span class="cp">##pelican-quickstart」でひな形を作る</span>
+
+<span class="err">$</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span> <span class="n">v3</span><span class="mf">.3.0</span><span class="p">.</span>
+
+<span class="n">This</span> <span class="n">script</span> <span class="n">will</span> <span class="n">help</span> <span class="n">you</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">Pelican</span><span class="o">-</span><span class="n">based</span> <span class="n">website</span><span class="p">.</span>
+
+<span class="n">Please</span> <span class="n">answer</span> <span class="n">the</span> <span class="n">following</span> <span class="n">questions</span> <span class="n">so</span> <span class="n">this</span> <span class="n">script</span> <span class="n">can</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">files</span> <span class="n">needed</span> <span class="n">by</span> <span class="n">Pelican</span><span class="p">.</span>
+
+
+<span class="o">&gt;</span> <span class="n">Where</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">your</span> <span class="n">new</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="p">[.]</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="n">Toshiyuki</span> <span class="n">Takeda</span>
+<span class="o">&gt;</span> <span class="n">Who</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="n">toshiukii</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="k">default</span> <span class="n">language</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="o">?</span> <span class="p">[</span><span class="n">en</span><span class="p">]</span> <span class="n">ja</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">URL</span> <span class="n">prefix</span><span class="o">?</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span> <span class="n">http</span><span class="o">:</span><span class="c1">//example.com   (Y/n) y</span>
+<span class="o">&gt;</span> <span class="n">What</span> <span class="n">is</span> <span class="n">your</span> <span class="n">URL</span> <span class="n">prefix</span><span class="o">?</span> <span class="p">(</span><span class="n">see</span> <span class="n">above</span> <span class="n">example</span><span class="p">;</span> <span class="n">no</span> <span class="n">trailing</span> <span class="n">slash</span><span class="p">)</span> <span class="n">http</span><span class="o">:</span><span class="c1">//toshiukii.github.io</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">article</span> <span class="n">pagination</span><span class="o">?</span> <span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">How</span> <span class="n">many</span> <span class="n">articles</span> <span class="n">per</span> <span class="n">page</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span><span class="o">?</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">Fabfile</span><span class="o">/</span><span class="n">Makefile</span> <span class="n">to</span> <span class="n">automate</span> <span class="n">generation</span> <span class="n">and</span> <span class="n">publishing</span><span class="o">?</span> <span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">an</span> <span class="k">auto</span><span class="o">-</span><span class="n">reload</span> <span class="o">&amp;</span> <span class="n">simpleHTTP</span> <span class="n">script</span> <span class="n">to</span> <span class="n">assist</span> <span class="n">with</span> <span class="n">theme</span> <span class="n">and</span> <span class="n">site</span> <span class="n">development</span><span class="o">?</span> <span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">FTP</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">SSH</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">Dropbox</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">S3</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">Rackspace</span> <span class="n">Cloud</span> <span class="n">Files</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="n">Done</span><span class="p">.</span> <span class="n">Your</span> <span class="n">new</span> <span class="n">project</span> <span class="n">is</span> <span class="n">available</span> <span class="n">at</span> <span class="n">toshiukii</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+</pre></div>
+
+
+<h3>ブログの作成と公開</h3>
+<h4>静的ページをホームにする</h4>
+<p>content/pages/home.mdを以下のようなファイルにする。</p>
+<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">Welcome</span> <span class="n">to</span> <span class="n">My</span> <span class="n">Site</span>
+<span class="n">URL</span><span class="o">:</span>
+<span class="n">save_as</span><span class="o">:</span> <span class="n">index</span><span class="o">.</span><span class="na">html</span>
+
+<span class="n">Thank</span> <span class="n">you</span> <span class="k">for</span> <span class="n">visiting</span><span class="o">.</span> <span class="n">Welcome</span><span class="o">!</span>
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+<!--
+-->
+        <div class="col-sm-3 well well-sm" id="sidebar">
+    <div id="avatar">
+        <img width="133px" class="img-thumbnail" src="/static/images/logo.png"/>
+    </div>
+<div id="aboutme">
+<a href="/"><h3>Toshiyuki Takeda</h3></a>
+</div>            <hr>
+            <ul>
+                <li>Profile
+                </li>
+                <li>Topics
+                    <ul>
+                        <li><a href="/projects/ws/">Interaction in Workshop</a></li>
+                        <li><a href="/projects/la/">Learning Analytics</a></li>
+                        <li><a href="/projects/oe/">Open Education</a></li>
+                        <li><a href="/projects/al/">Active Learning</a></li>
+                        <li><a href="/projects/ws/">Data Analysis</a></li>
+                    </ul>
+                </li>
+                <li>Lectures
+                    <ul>
+                        <li><a href="/lectures/id/">情報デザイン</a></li>
+                        <li><a href="/lectures/movie/">映像処理</a></li>
+                    </ul>
+                </li>
+                <li>Publications
+                    <div><a href="http://researchmap.jp/toshiyukii/">Researchmapのページ</a></div>
+                </li>
+                <li>Software
+                </li>
+            </ul>
+
+            <hr>
+
+            <div>
+                <a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a>
+            </div>
+            <div>
+                <a href="/"><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></a>
+                <ul class="list-group " id="tags">
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e51b50>, <pelican.contents.Article object at 0x103e499d0>]">-->
+                        <a href="/tag/blog.html">
+                            blog
+                        </a>
+                    <!--</li>-->
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e51b50>, <pelican.contents.Article object at 0x103e499d0>]">-->
+                        <a href="/tag/pelican.html">
+                            pelican
+                        </a>
+                    <!--</li>-->
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e51b50>, <pelican.contents.Article object at 0x103e499d0>]">-->
+                        <a href="/tag/github.html">
+                            github
+                        </a>
+                    <!--</li>-->
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e5e450>]">-->
+                        <a href="/tag/active-learning.html">
+                            active learning
+                        </a>
+                    <!--</li>-->
+                <!--</ul>-->
+            </div>
+
+            <hr>
+
+            <div>
+                Follow me:
+                <ul class="list-group" id="social">
+                  <!--<li class="list-group-item">-->
+                  <a href="http://twitter.com/toshiukii" title="twitter"><i
+                          class="fa fa-twitter-square fa-lg social-icon"></i>
+                  </a>
+                  <!--</li>-->
+                  <!--<li class="list-group-item">-->
+                  <a href="http://www.linkedin.com/pub/toshiyuki-takeda/26/9a0/881" title="linkedin"><i
+                          class="fa fa-linkedin-square fa-lg social-icon"></i>
+                  </a>
+                  <!--</li>-->
+                  <!--<li class="list-group-item">-->
+                  <a href="http://github.com/toshiukii" title="github"><i
+                          class="fa fa-github-square fa-lg social-icon"></i>
+                  </a>
+                  <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Toshiyuki Takeda
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Github pages+Jekyllでホームページ作成 - Toshiyuki Takeda</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Toshiyuki Takeda" />
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Github pages+Jekyllでホームページ作成"/>
+            <meta property="og:url" content="/ghpages_jekyll.html"/>
+            <meta property="og:description" content="Jekyll (静的サイトのジェネレータ) と組みあわせることによって、ローカルで書いたMarkdownのコンテンツを、HTMLに変換したサイトを作成することができる。これと、Github pagesと組みあわせることによって、サイトのバージョン管理を容易におこなうことができる。 日本語の資料としては、「Jekyllいつやるの？ジキやルの？今でしょ！」が、ていねいに書いてあってわかりやすい。 1. 準備 まず、ローカルにJekyllの環境をととのえる。Rubyを用意してから、gemでJekyllをインストールする。しかし、Using Jekyll with Pagesと、Jekyllのページで若干内容が違う。gemは、github-pagesか、jekyllかどっちが正しいのだろう？ 2. Jekyllサイトの作成 サイトのフォルダは、Jekyllでつくるか、テンプレートをダウンロード、展開して使う。 ここでは、Jekyll themesで紹介されている中から、Lagomを使用している。 wget https://github.com/swanson/lagom/archive ..."/>
+            <meta property="article:published_time" content="2013-10-02" />
+            <meta property="article:section" content="blog" />
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+        <link href="/static/css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<!--
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Toshiyuki Takeda            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/activelearningworkshop.html">Activelearningworkshop</a>
+                        </li>
+                        <li >
+                            <a href="/category/al.html">Al</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="/category/la.html">La</a>
+                        </li>
+                        <li >
+                            <a href="/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="/category/oe.html">Oe</a>
+                        </li>
+                        <li >
+                            <a href="/category/ws.html">Ws</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse --><!--
+    </div>
+</div>--><!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9" id="main">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/ghpages_jekyll.html"
+                       rel="bookmark"
+                       title="Permalink to Github pages+Jekyllでホームページ作成">
+                        Github pages+Jekyllでホームページ作成
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-10-02T00:00:00"> 水 02 10月 2013</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Jekyll (静的サイトのジェネレータ) と組みあわせることによって、ローカルで書いたMarkdownのコンテンツを、HTMLに変換したサイトを作成することができる。これと、Github pagesと組みあわせることによって、サイトのバージョン管理を容易におこなうことができる。</p>
+<p>日本語の資料としては、「<a href="http://melborne.github.io/2013/05/20/now-the-time-to-start-jekyll/">Jekyllいつやるの？ジキやルの？今でしょ！</a>」が、ていねいに書いてあってわかりやすい。</p>
+<h3>1. 準備</h3>
+<p>まず、ローカルにJekyllの環境をととのえる。Rubyを用意してから、gemでJekyllをインストールする。しかし、<a href="https://help.github.com/articles/using-jekyll-with-pages">Using Jekyll with Pages</a>と、<a href="http://jekyllrb.com/docs/home/">Jekyllのページ</a>で若干内容が違う。gemは、github-pagesか、jekyllかどっちが正しいのだろう？</p>
+<h3>2. Jekyllサイトの作成</h3>
+<p>サイトのフォルダは、Jekyllでつくるか、テンプレートをダウンロード、展開して使う。</p>
+<p>ここでは、Jekyll themesで紹介されている中から、<a href="http://jekyllthemes.org/themes/lagom/">Lagom</a>を使用している。</p>
+<div class="highlight"><pre><span class="n">wget</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/swanson/lagom/archive/master.zip</span>
+<span class="n">unzip</span> <span class="n">master</span><span class="p">.</span><span class="n">zip</span>
+<span class="n">mv</span> <span class="n">lagom</span><span class="o">-</span><span class="n">master</span><span class="o">/</span> <span class="n">USERNAME</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span>
+</pre></div>
+
+
+<p>ここで、USERNAMEは自分のgithubアカウントの名前にすること。</p>
+<h3>3.  サイトの設定</h3>
+<p>_config.yml にYAML形式で記述する。</p>
+<ul>
+<li>サイトのロゴ名は、logo.pngに固定されていることに注意。</li>
+<li>独自ドメインの設定をしているときは、CNAMEを書く。</li>
+</ul>
+<h3>フォルダ構成</h3>
+<h3>4. 記事の作成とビルド</h3>
+<p>記事は_postフォルダにMarkdown形式で書く。そして、</p>
+<div class="highlight"><pre><span class="n">jekyll</span> <span class="n">build</span>
+</pre></div>
+
+
+<p>とするとブログがHTMLに変換される。</p>
+<h3>5. githubとの接続</h3>
+<p>githubにはSERNAME.github.ioの名前のリポジトリを作成しておく。これは特殊な名前となり、github pageと認識される。</p>
+<div class="highlight"><pre><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s">&quot;First commit&quot;</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">USERNAME</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+
+
+<p>以下はその他のもろもろのメモ。</p>
+<h3>Jekyll Bootstrap</h3>
+<p><a href="http://jekyllbootstrap.com/">Jekyll Bootstrap</a>は、Jeklyll 1.0に未対応のようであるが、Bootstrap対応にするのはそれほどむずかしくはないだろう。</p>
+<h3>Scrivenerとの連携（失敗）</h3>
+<p>Scrivernerと連携すると便利だと思ったのだがうまくいかなかった。Scrivenerはフォルダと連携するときにファイル名にバージョン管理のための連番をつけてしまう。これがJekyllでビルドするときにうまくいかなかった。</p>
+<h3>ブログからのインポート</h3>
+<p>記事をブログサイトから移行することが可能であるらしいが、実際にやっていないのでうまくいくかは不明である。</p>
+<p>インポート用のgemをインストールする。</p>
+<div class="highlight"><pre><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">import</span> <span class="o">--</span><span class="n">pre</span>
+</pre></div>
+
+
+<p>Tumblrからのインポート</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">irb</span>
+<span class="o">&gt;</span> <span class="n">require</span> <span class="s">&quot;jekyll/jekyll-import/tumblr&quot;</span>
+<span class="o">=&gt;</span> <span class="nb">true</span>
+<span class="o">&gt;</span> <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://toshiukii.tumblr.com/&quot;</span>
+<span class="s">&quot;http://toshiukii.tumblr.com/&quot;</span>
+<span class="o">&gt;</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;md&quot;</span>
+<span class="s">&quot;md&quot;</span>
+<span class="o">&gt;</span> <span class="n">grab_images</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="o">=&gt;</span> <span class="nb">true</span>
+<span class="o">&gt;</span> <span class="n">add_highlights</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="o">=&gt;</span> <span class="nb">true</span>
+<span class="o">&gt;</span> <span class="n">rewrite_urls</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="o">=&gt;</span> <span class="nb">true</span>
+<span class="o">&gt;</span> <span class="n">JekyllImport</span><span class="o">::</span><span class="n">Tumblr</span><span class="p">.</span><span class="n">process</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="n">grab_images</span><span class="p">,</span> <span class="n">add_highlights</span><span class="p">,</span> <span class="n">rewrite_urls</span><span class="p">)</span>
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+<!--
+-->
+        <div class="col-sm-3 well well-sm" id="sidebar">
+    <div id="avatar">
+        <img width="133px" class="img-thumbnail" src="/static/images/logo.png"/>
+    </div>
+<div id="aboutme">
+<a href="/"><h3>Toshiyuki Takeda</h3></a>
+</div>            <hr>
+            <ul>
+                <li>Profile
+                </li>
+                <li>Topics
+                    <ul>
+                        <li><a href="/projects/ws/">Interaction in Workshop</a></li>
+                        <li><a href="/projects/la/">Learning Analytics</a></li>
+                        <li><a href="/projects/oe/">Open Education</a></li>
+                        <li><a href="/projects/al/">Active Learning</a></li>
+                        <li><a href="/projects/ws/">Data Analysis</a></li>
+                    </ul>
+                </li>
+                <li>Lectures
+                    <ul>
+                        <li><a href="/lectures/id/">情報デザイン</a></li>
+                        <li><a href="/lectures/movie/">映像処理</a></li>
+                    </ul>
+                </li>
+                <li>Publications
+                    <div><a href="http://researchmap.jp/toshiyukii/">Researchmapのページ</a></div>
+                </li>
+                <li>Software
+                </li>
+            </ul>
+
+            <hr>
+
+            <div>
+                <a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a>
+            </div>
+            <div>
+                <a href="/"><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></a>
+                <ul class="list-group " id="tags">
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e51b50>, <pelican.contents.Article object at 0x103e499d0>]">-->
+                        <a href="/tag/blog.html">
+                            blog
+                        </a>
+                    <!--</li>-->
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e51b50>, <pelican.contents.Article object at 0x103e499d0>]">-->
+                        <a href="/tag/pelican.html">
+                            pelican
+                        </a>
+                    <!--</li>-->
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e51b50>, <pelican.contents.Article object at 0x103e499d0>]">-->
+                        <a href="/tag/github.html">
+                            github
+                        </a>
+                    <!--</li>-->
+                    <!--<li class="list-group-item tag-[<pelican.contents.Article object at 0x103e5e450>]">-->
+                        <a href="/tag/active-learning.html">
+                            active learning
+                        </a>
+                    <!--</li>-->
+                <!--</ul>-->
+            </div>
+
+            <hr>
+
+            <div>
+                Follow me:
+                <ul class="list-group" id="social">
+                  <!--<li class="list-group-item">-->
+                  <a href="http://twitter.com/toshiukii" title="twitter"><i
+                          class="fa fa-twitter-square fa-lg social-icon"></i>
+                  </a>
+                  <!--</li>-->
+                  <!--<li class="list-group-item">-->
+                  <a href="http://www.linkedin.com/pub/toshiyuki-takeda/26/9a0/881" title="linkedin"><i
+                          class="fa fa-linkedin-square fa-lg social-icon"></i>
+                  </a>
+                  <!--</li>-->
+                  <!--<li class="list-group-item">-->
+                  <a href="http://github.com/toshiukii" title="github"><i
+                          class="fa fa-github-square fa-lg social-icon"></i>
+                  </a>
+                  <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Toshiyuki Takeda
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>
